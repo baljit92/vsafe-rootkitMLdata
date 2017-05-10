@@ -76,7 +76,7 @@ print "fn: %d"%(fn)
 # Reduce the feature space to 2D
 reduced_data = PCA(n_components=3).fit_transform(X)
 
-#separating the components
+# separating the components
 reduced_x = reduced_data[:,0]
 reduced_y = reduced_data[:,1]
 reduced_z = reduced_data[:,2]
@@ -91,7 +91,7 @@ real_x = [reduced_x[i] for i,x in enumerate(y) if x == 1]
 real_y = [reduced_y[i] for i,x in enumerate(y) if x == 1]
 real_z = [reduced_z[i] for i,x in enumerate(y) if x == 1]
 
-# getting the components of wynthetic rootkit data
+# getting the components of synthetic rootkit data
 synth_x = [reduced_x[i] for i,x in enumerate(y) if x == 2]
 synth_y = [reduced_y[i] for i,x in enumerate(y) if x == 2]
 synth_z = [reduced_z[i] for i,x in enumerate(y) if x == 2]
